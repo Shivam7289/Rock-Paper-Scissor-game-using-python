@@ -1,0 +1,41 @@
+# This program is for playing Rock Paper Scissor
+import random as r
+def game(comp,you):
+    if comp==you:
+        return "The game is a tie."
+    elif comp=="Rock":
+        if you == "Paper":
+            return "You Won"
+        elif you =="Scissor":
+            return "You Lose"
+        else:
+            return "Enter a valid input."
+        
+    elif comp=="Paper":
+        if you=="Rock":
+            return "You Lose"
+        elif you=="Scissor":
+            return "You Won"
+        else:
+            return "Enter a valid input."
+        
+    elif comp== "Scissor":
+        if you=="Rock":
+            return "You Won"
+        elif you=="Paper":
+            return "You Lose"
+        else:
+            return "Enter a valid input."
+print("Rock , Paper , Scissor")
+rand=r.randint(1,3)
+if rand == 1:
+    comp="Rock"
+elif rand == 2:
+    comp="Paper"
+elif rand ==3:
+    comp="Scissor"
+
+you =input("Enter your choice: ")
+a=game(comp,you)
+print("Computer Choose:",comp)
+print(a)
